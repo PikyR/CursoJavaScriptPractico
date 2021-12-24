@@ -1,4 +1,14 @@
 extends template.pug 
 
 block content
-  h1 Figuras geométricas
+  header 
+    h1 Figuras geométricas
+    p Primer taller del Curso Práctico de JavaScript 
+  section 
+    h2 Calculadora de área y perimetro de un cuadrado
+    form(action="" method="method")
+      label(for="InputCuadrado") Lado del cuadrado: 
+      input(type="number" id="InputCuadrado")
+      button(type="button" onclick="calcularPerimetroCuadrado()") Calcular el perímetro
+      button(type="button" onclick="calcularAreaCuadrado()") Calcular el área
+
