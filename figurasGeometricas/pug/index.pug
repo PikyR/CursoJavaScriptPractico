@@ -1,14 +1,44 @@
 extends template.pug 
 
 block content
-  header 
-    h1 Figuras geométricas
-    p Primer taller del Curso Práctico de JavaScript 
-  section 
-    h2 Calculadora de área y perimetro de un cuadrado
-    form(action="" method="method")
-      label(for="InputCuadrado") Lado del cuadrado: 
-      input(type="number" id="InputCuadrado")
-      button(type="button" onclick="calcularPerimetroCuadrado()") Calcular el perímetro
-      button(type="button" onclick="calcularAreaCuadrado()") Calcular el área
+  .main-container
+    header.header 
+      h1.header__title Figuras geométricas
+      p.header__subtitle Primer taller del Curso Práctico de JavaScript
 
+    section.calculator
+      h2.calculator__title Calculadora de perímetro y área de un cuadrado
+      form.calculator__form
+        .calculator__field
+          label.calculator__label(for="InputCuadrado") Lado del cuadrado: 
+          input.calculator__input(type="number" id="InputCuadrado")
+        button.calculator__button(type="button" onclick="calcularPerimetroCuadrado()") Calcular el perímetro
+        button.calculator__button(type="button" onclick="calcularAreaCuadrado()") Calcular el área
+    
+    section.calculator 
+      h2.calculator__title Calculadora de perímetro y áera de un triángulo 
+      form.calculator__form
+        .calculator__field
+          label.calculator__label(for="InputTrianguloLado1") Lado 1 del triángulo: 
+          input.calculator__input(type="number", id="InputTrianguloLado1")
+        .calculator__field  
+          label.calculator__label(for="InputTrianguloLado2") Lado 2 del triángulo: 
+          input.calculator__input(type="number", id="InputTrianguloLado2")
+        .calculator__field
+          label.calculator__label(for="InputTrianguloBase") Base del triángulo: 
+          input.calculator__input(type="number", id="InputTrianguloBase")
+        .calculator__field
+          label.calculator__label(for="InputTrianguloAltura") Altura del triángulo: 
+          input.calculator__input(type="number", id="InputTrianguloAltura")
+        button.calculator__button(type='button' onclick="calcularPerimetroTriangulo()") Calcular el perímetro
+        button.calculator__button(type='button' onclick="calcularAreaTriangulo()") Calcular el áerea
+        button.calculator__button(type='button' onclick="calcularAlturaTriangulo()") Calcular la altura
+    
+    section.calculator 
+      h2.calculator__title Calculadora de perímetro y área de un círculo 
+      form.calculator__form
+        .calculator__field
+          label.calculator__label(for="InputCirculo") Radio del círculo:
+          input.calculator__input(type="number" id="InputCirculo")
+        button.calculator__button(type="button" onclick="calcularPerimetroCirculo()") Calcular el perímetro 
+        button.calculator__button(type="button" onclick="calcularAreaCirculo()") Calcular el áera

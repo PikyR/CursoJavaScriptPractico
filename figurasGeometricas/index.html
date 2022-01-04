@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Figuras geométricas | Curso JS practico</title>
   </head>
   <body> 
-    <header> 
-      <h1>Figuras geométricas</h1>
-      <p>Primer taller del Curso Práctico de JavaScript </p>
-    </header>
-    <section> 
-      <h2>Calculadora de área y perimetro de un cuadrado</h2>
-      <form action="" method="method">
-        <label for="InputCuadrado">Lado del cuadrado: </label>
-        <input type="number" id="InputCuadrado">
-        <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
-        <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-      </form>
-    </section>
+    <div class="main-container">
+      <header class="header"> 
+        <h1 class="header__title">Figuras geométricas</h1>
+        <p class="header__subtitle">Primer taller del Curso Práctico de JavaScript</p>
+      </header>
+      <section class="calculator">
+        <h2 class="calculator__title">Calculadora de perímetro y área de un cuadrado</h2>
+        <form class="calculator__form">
+          <div class="calculator__field">
+            <label class="calculator__label" for="InputCuadrado">Lado del cuadrado: </label>
+            <input class="calculator__input" type="number" id="InputCuadrado">
+          </div>
+          <button class="calculator__button" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+          <button class="calculator__button" type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+        </form>
+      </section>
+      <section class="calculator"> 
+        <h2 class="calculator__title">Calculadora de perímetro y áera de un triángulo </h2>
+        <form class="calculator__form">
+          <div class="calculator__field">
+            <label class="calculator__label" for="InputTrianguloLado1">Lado 1 del triángulo: </label>
+            <input class="calculator__input" type="number" id="InputTrianguloLado1">
+          </div>
+          <div class="calculator__field"> 
+            <label class="calculator__label" for="InputTrianguloLado2">Lado 2 del triángulo: </label>
+            <input class="calculator__input" type="number" id="InputTrianguloLado2">
+          </div>
+          <div class="calculator__field">
+            <label class="calculator__label" for="InputTrianguloBase">Base del triángulo: </label>
+            <input class="calculator__input" type="number" id="InputTrianguloBase">
+          </div>
+          <div class="calculator__field">
+            <label class="calculator__label" for="InputTrianguloAltura">Altura del triángulo: </label>
+            <input class="calculator__input" type="number" id="InputTrianguloAltura">
+          </div>
+          <button class="calculator__button" type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+          <button class="calculator__button" type="button" onclick="calcularAreaTriangulo()">Calcular el áerea</button>
+          <button class="calculator__button" type="button" onclick="calcularAlturaTriangulo()">Calcular la altura</button>
+        </form>
+      </section>
+      <section class="calculator"> 
+        <h2 class="calculator__title">Calculadora de perímetro y área de un círculo </h2>
+        <form class="calculator__form">
+          <div class="calculator__field">
+            <label class="calculator__label" for="InputCirculo">Radio del círculo:</label>
+            <input class="calculator__input" type="number" id="InputCirculo">
+          </div>
+          <button class="calculator__button" type="button" onclick="calcularPerimetroCirculo()">Calcular el perímetro </button>
+          <button class="calculator__button" type="button" onclick="calcularAreaCirculo()">Calcular el áera</button>
+        </form>
+      </section>
+    </div>
     <script src="js/scripts.js"> </script>
   </body>
 </html>
