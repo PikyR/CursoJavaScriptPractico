@@ -1,4 +1,19 @@
 extends template.pug 
 
 block content 
-  h1 Porcentajes y descuentos
+  header
+    h1 Porcentajes y descuentos
+    p Segundo taller del Curo Práctico de JavaScript
+  
+  section 
+    h2 Calcula el descuento de tus productos
+    form
+      label(for="InputPrice") Precio del producto
+      input(id="InputPrice" type="number")
+      
+      label(for="InputCupon") Cupon de descuento
+      input(id="InputCupon" type="text")
+
+      button(type="button" onclick="onClickCalculateFinalPrice()") Calcular precio final
+
+      p(id="FinalPriceP")
