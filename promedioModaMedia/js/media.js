@@ -1,14 +1,3 @@
-const listaMedia = [
-  100,
-  11,
-  200,
-  44,
-  350,
-  444,
-  8554,
-  1000000
-];
-
 function calcularMediaAritmetica(lista) {
   const sumaLista = lista.reduce(
     function(valorAcumulado = 0, nuevoElemento) {
@@ -55,5 +44,5 @@ function calcularMedia(lista) {
     media = lista[mitadLista];
   }
 
-  return "Media: " + media;
+  return media;
 }
